@@ -1,6 +1,6 @@
 Name:		texlive-tikz-kalender
 Version:	52890
-Release:	1
+Release:	2
 Summary:	A LaTeX based calendar using TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tikz-kalender
