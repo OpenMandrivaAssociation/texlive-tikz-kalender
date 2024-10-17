@@ -3,7 +3,7 @@ Version:	52890
 Release:	2
 Summary:	A LaTeX based calendar using TikZ
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tikz-kalender
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tikz-kalender
 License:	cc-by-sa-1
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-kalender.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-kalender.doc.r%{version}.tar.xz
