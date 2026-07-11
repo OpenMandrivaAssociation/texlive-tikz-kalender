@@ -1,40 +1,24 @@
-Name:		texlive-tikz-kalender
-Version:	52890
-Release:	2
+%global tl_name tikz-kalender
+%global tl_revision 77915
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.6b
+Release:	%{tl_revision}.1
 Summary:	A LaTeX based calendar using TikZ
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tikz-kalender
+URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-kalender
 License:	cc-by-sa-1
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-kalender.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-kalender.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-kalender.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-kalender.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-For usage see the example files tikz-kalender-example1.tex,
-tikz-kalender-example2.tex, and *.events. The Code is inspired
-by this document and is subject to the >>Creative Commons
-attribution license (CC-BY-SA)<<. The class tikz-kalender
-requires the package TikZ and the TikZ libraries calc and
-calendar.
+For usage see the example files tikz-kalender-example1.tex, tikz-
+kalender-example2.tex, tikz-kalender-example3.tex, and *.events. The
+Code is inspired by this document and is subject to the >>Creative
+Commons attribution license (CC-BY-SA)<<. The class tikz-kalender
+requires the package TikZ and the TikZ libraries calc and calendar.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/tikz-kalender
-%doc %{_texmfdistdir}/doc/latex/tikz-kalender
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
