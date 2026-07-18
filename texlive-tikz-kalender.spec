@@ -1,9 +1,9 @@
 %global tl_name tikz-kalender
-%global tl_revision 77915
+%global tl_revision 79684
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	0.6b
+Version:	0.7a
 Release:	%{tl_revision}.1
 Summary:	A LaTeX based calendar using TikZ
 Group:		Publishing
